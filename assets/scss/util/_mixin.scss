@@ -1,0 +1,28 @@
+
+
+
+$pc:1229px;
+$tablet:1024px;
+$m:767px;
+
+
+@mixin pc(){
+    @media (max-width:$pc) {
+        @content;
+    }
+}
+
+
+@mixin tablet(){
+    @media (max-width:$tablet) {
+        @content;
+    }
+}
+
+
+
+@mixin mobile(){
+    @media (max-width:$m) {
+        @content;
+    }
+}

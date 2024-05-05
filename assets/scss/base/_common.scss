@@ -1,0 +1,58 @@
+.blind{
+  position: absolute;
+  width: 1px;height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+.skip-nav {
+  position: absolute;
+
+  a {
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    transform: translateY(-100%);
+
+    &:active,
+    &:focus {
+      transform: translateY(0);
+    }
+  }
+}
+.wrapper{
+  padding-top: var(--header-height);
+  min-width: 320px;
+}
+
+#main {
+  .inner{
+
+    max-width: 1408px;
+    padding: 0 104px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include tablet{
+      padding: 0 50px;
+    }
+    @include mobile{
+      padding: 0 22px;
+    }
+
+
+  }
+}
+.pc-sp{
+  background-image: url('../images/sp-01.png');
+  background-size: 328px;
+  background-repeat: no-repeat;
+}
+.pc-sp2{
+  background-image: url('https://recruit.navercorp.com/share/tmplat/naver/img/sp_mo.png');
+  background-size: 195px 181px;
+  background-repeat: no-repeat;
+}

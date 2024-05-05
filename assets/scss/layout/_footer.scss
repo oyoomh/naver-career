@@ -1,0 +1,158 @@
+#footer{
+  background-color: #f2f2f2;
+  .inner{
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1920px;
+    padding: 25px 104px 25px 98px;
+    margin: 0 auto;
+    @include pc{
+      padding: 25px 22px 25px 22px;
+    }
+  }
+  .group-top{
+    display: flex;
+    align-items: center;
+    @include tablet{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .corp-area{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include mobile{
+      gap: 11px;
+    }
+    .logo{
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: -0.32px;
+      color: #000;
+      @include mobile{
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.3px;
+      }
+    
+    }
+    .corp{
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: -0.28px;
+      color: #909090;
+    }
+  }
+  .site-area{
+    position: relative;
+    margin-left: auto;
+    @include tablet{
+      margin-left: initial;
+      width: 100%;
+    }
+    @include mobile{
+      margin-top: 15px;
+      font-size: 12px;
+      color: #1d1d1d;
+    }
+    &.active{
+      .site-list{
+        display: block;
+      }
+      .btn-site{
+        padding: 0 12px;
+        background-color: #fff;
+        &::before{
+          
+          transform: rotate(180deg);
+          right: 12px;
+        }
+        &::after{
+          background: #fff;
+        }
+      }
+    }
+    .btn-site{
+      position: relative;
+      width: 280px;
+      line-height: 42px;
+      text-align: left;
+      background-color: #f2f2f2;
+      @include tablet{
+        width: 100%;
+      }
+      &::before{
+        @extend .pc-sp;
+        content: "";
+        position: absolute;
+        top: 18px;
+        right: 0;
+        background-position: -122px -93px;
+        width: 10px;
+        height: 6px;
+        
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #000;
+        @include tablet{
+          background-color: #b4b4b4;
+        }
+      }
+    }
+    .site-list{
+      display: none;
+      position: absolute;
+      bottom: 42px;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      z-index: 100;
+    
+      .site-item{
+        padding: 0 12px;
+        font-size: 18px;
+        line-height: 42px;
+        
+        @include  mobile{
+          font-size: 12px;
+        }
+        &:hover{
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+  .list-area{
+   
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 5px 0 0;
+      .item{
+        color: #909090;
+        &:not(:last-child){
+          position: relative;
+          padding-right: 20px;
+          &::before{
+            
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 12px;
+            background: #909090;
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
